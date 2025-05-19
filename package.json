@@ -1,0 +1,25 @@
+{
+  "name": "ajawsay",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "Tell Ajaw what to say",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "cowsay",
+    "genshin",
+    "ajaw",
+    "ASCII"
+  ],
+  "dependencies": {
+    "ansis": "^4.0.0",
+    "string-width": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "type": "module"
+}
