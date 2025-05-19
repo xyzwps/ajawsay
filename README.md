@@ -8,4 +8,4 @@ import say from 'ajawsay'
 console.log(say("Hello 世界！\nIts nice!"));
 ```
 
-![output](./output.jpeg)
+![output](https://github.com/xyzwps/ajawsay/blob/main/output.jpeg?raw=true)
