@@ -4,7 +4,7 @@ import { black } from "ansis";
 const B = "#847756"; // brown
 const Y = "#dcd44e"; // yellow
 
-const bd = (text: string) => black.bgHex(B)(text); // BorDer
+const bd = (text: string) => black.hex(B)(text); // BorDer
 const bg = (text: string) => black.bgHex(Y)(text); // BackGroud
 
 export default function balloon(text: string) {
@@ -17,19 +17,21 @@ export default function balloon(text: string) {
   }
   const pw = cw.map((w, i) => w + mw - stringWidth(lines[i]));
 
-  const bs = bd("  "); // border square
-  const borderTopBottom = `  ${bd(" ".repeat(mw + 4))}  `;
-  const paddingTopBottom = bs + bg(" ".repeat(mw + 4)) + bs;
+  const bl = bd("█"); // border square
+  const borderTop = `  ${bd("▄".repeat(mw + 4))}  `;
+  const borderBotttom = `  ${bd("▀▀")}${bd("█")}${bd("▀".repeat(mw + 1))}  `;
+  const paddingTopBottom = ` ${bl}${bg(" ".repeat(mw + 4))}${bl}`;
+  const arrow = bd("▀▄");
 
   const b = [
-    borderTopBottom,
+    borderTop,
     paddingTopBottom,
     ...lines.map(
-      (line, i) => bs + black.bgHex(Y)(`  ${line.padEnd(pw[i])}  `) + bs
+      (line, i) => ` ${bl}${black.bgHex(Y)(`  ${line.padEnd(pw[i])}  `)}${bl}`
     ),
     paddingTopBottom,
-    borderTopBottom,
-  ].join("\n");
+    borderBotttom,
+  ].map(it => `   ${it}`).join("\n");
 
-  return `${b}\n    ${bs}\n      ${bs}\n        ${bs}\n`;
+  return `${b}\n        ${arrow}\n          ${arrow}\n`;
 }
