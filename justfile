@@ -5,3 +5,6 @@
 
 @example:
     bun run example/index.ts
+
+@check:
+    bunx biome check --write src/ tools/ cli.ts biome.json package.json

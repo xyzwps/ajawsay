@@ -1,5 +1,5 @@
-import stringWidth from "string-width";
 import { black } from "ansis";
+import stringWidth from "string-width";
 
 const B = "#847756"; // brown
 const Y = "#dcd44e"; // yellow
@@ -26,12 +26,12 @@ export default function balloon(text: string) {
   const b = [
     borderTop,
     paddingTopBottom,
-    ...lines.map(
-      (line, i) => ` ${bl}${black.bgHex(Y)(`  ${line.padEnd(pw[i])}  `)}${bl}`
-    ),
+    ...lines.map((line, i) => ` ${bl}${black.bgHex(Y)(`  ${line.padEnd(pw[i])}  `)}${bl}`),
     paddingTopBottom,
     borderBotttom,
-  ].map(it => `   ${it}`).join("\n");
+  ]
+    .map((it) => `   ${it}`)
+    .join("\n");
 
   return `${b}\n        ${arrow}\n          ${arrow}\n`;
 }

@@ -7,20 +7,14 @@
     "ajawsay": "./cli.js"
   },
   "description": "Tell Ajaw what to say",
-  "files": [
-    "dist/"
-  ],
-  "keywords": [
-    "cowsay",
-    "genshin",
-    "ajaw",
-    "ASCII"
-  ],
+  "files": ["dist/"],
+  "keywords": ["cowsay", "genshin", "ajaw", "ASCII"],
   "dependencies": {
     "ansis": "^4.0.0",
     "string-width": "^7.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/bun": "latest"
   },
   "private": false,
