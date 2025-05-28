@@ -1,13 +1,13 @@
 {
   "name": "ajawsay",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
     "ajawsay": "./cli.js"
   },
   "description": "Tell Ajaw what to say",
-  "files": ["dist/"],
+  "files": ["dist/", "cli.js"],
   "keywords": ["cowsay", "genshin", "ajaw", "ASCII"],
   "dependencies": {
     "ansis": "^4.0.0",
